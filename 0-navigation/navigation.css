@@ -1,0 +1,16 @@
+.navigation {
+  display: flex;
+}
+
+.navigation__item {
+  color: var(--color-white);
+  font-size: 18px;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.navigation__item.navigation__item_active,
+.navigation__item:hover {
+  color: var(--color-red);
+  font-weight: 700;
+}
