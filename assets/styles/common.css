@@ -19,3 +19,9 @@ body {
   line-height: 160%;
   background-color: #1f1e19;
 }
+
+.container {
+  max-width: 988px;
+  margin: 0 auto;
+  height: 3000px;
+}
