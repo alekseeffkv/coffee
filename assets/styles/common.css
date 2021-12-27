@@ -3,6 +3,7 @@
 :root {
   --color-white: #fff;
   --color-red: #FF4B32;
+  --color-black: #000000;
   --font-primary: "Open Sans";
   --font-secondary: "Josefin Sans";
 }
@@ -17,11 +18,10 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
-  background-color: #1f1e19;
+  background-color: #ffffff;
 }
 
 .container {
   max-width: 988px;
   margin: 0 auto;
-  height: 3000px;
 }

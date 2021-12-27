@@ -1,0 +1,115 @@
+.card {
+  width: 310px;
+  height: 542px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.2s all;
+}
+
+.card__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__price {
+  color: var(--color-black);
+  font-family: var(--font-secondary), sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.card__title {
+  color: var(--color-black);
+  font-family: var(--font-secondary), sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  text-align: left;
+}
+
+.card__desc {
+  width: 260px;
+  text-align: left;
+  opacity: 0.6;
+}
+
+.card__bottom {
+  height: 57px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__inner {
+  display: grid;
+  grid-template-columns: 57px 57px;
+  grid-template-rows: 28.5px 28.5px;
+  width: 114px;
+  
+}
+
+.card__count {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 1px solid var(--color-black);
+  border-radius: 2px 0 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.card__plus {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border-top: 1px solid var(--color-black);
+  border-right: 1px solid var(--color-black);
+  border-radius: 0 2px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__minus {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-top: 1px solid var(--color-black);
+  border-right: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  border-radius: 0 0 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__button {
+  width: 167px;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-red);
+  cursor: pointer;
+  color: var(--color-white);
+  font-family: var(--font-secondary), sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+}
