@@ -1,5 +1,7 @@
 .navigation {
   display: flex;
+  justify-content: space-between;
+  width: 485px;
 }
 
 .navigation__item {
@@ -12,5 +14,5 @@
 .navigation__item.navigation__item_active,
 .navigation__item:hover {
   color: var(--color-red);
-  font-weight: 700;
+  opacity: 1;
 }
