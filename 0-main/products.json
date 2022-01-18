@@ -7,11 +7,32 @@
     "id": "brazilian-coffe-beans"
   },
   {
-    "name": "Brazilian coffe beans",
+    "name": "Vietnam coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
-    "price": 5.99,
-    "image": "brazilian_coffe_beans.png",
-    "id": "brazilian-coffe-beans"
+    "price": 4.99,
+    "image": "vietnam_coffe_beans.png",
+    "id": "vietnam-coffe-beans"
+  },
+  {
+    "name": "Indonesian coffe beans",
+    "desc": "Coffee that’s always you handle your own the way you like.",
+    "price": 3.99,
+    "image": "indonesian_coffe_beans.png",
+    "id": "indonesian-coffe-beans"
+  },
+  {
+    "name": "Vietnam coffe beans",
+    "desc": "Coffee that’s always you handle your own the way you like.",
+    "price": 4.99,
+    "image": "vietnam_coffe_beans.png",
+    "id": "vietnam-coffe-beans"
+  },
+  {
+    "name": "Indonesian coffe beans",
+    "desc": "Coffee that’s always you handle your own the way you like.",
+    "price": 3.99,
+    "image": "indonesian_coffe_beans.png",
+    "id": "indonesian-coffe-beans"
   },
   {
     "name": "Brazilian coffe beans",
@@ -21,11 +42,11 @@
     "id": "brazilian-coffe-beans"
   },
   {
-    "name": "Brazilian coffe beans",
+    "name": "Indonesian coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
-    "price": 5.99,
-    "image": "brazilian_coffe_beans.png",
-    "id": "brazilian-coffe-beans"
+    "price": 3.99,
+    "image": "indonesian_coffe_beans.png",
+    "id": "indonesian-coffe-beans"
   },
   {
     "name": "Brazilian coffe beans",
@@ -35,10 +56,10 @@
     "id": "brazilian-coffe-beans"
   },
   {
-    "name": "Brazilian coffe beans",
+    "name": "Vietnam coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
-    "price": 5.99,
-    "image": "brazilian_coffe_beans.png",
-    "id": "brazilian-coffe-beans"
+    "price": 4.99,
+    "image": "vietnam_coffe_beans.png",
+    "id": "vietnam-coffe-beans"
   }
 ]
