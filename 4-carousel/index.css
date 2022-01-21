@@ -2,21 +2,17 @@
   height: 735px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-}
-
-.carousel__top {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel__name {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 505px;
-  height: 130px;
+  width: 510px;
+  height: 135px;
 }
 
 .carousel__title {
@@ -24,20 +20,39 @@
   font-weight: 600;
   font-size: 43px;
   line-height: 130%;
-  text-align: left;
 }
 
-.carousel__desc {
+.carousel__description {
+  font-family: var(--font-primary);
+  font-weight: 400;
   font-size: 18px;
-  text-align: left;
+  line-height: 160%;
+  opacity: 0.7;
 }
 
-.carousel__arrows {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 112px;
+.carousel__arrow {
+  position: absolute;
+  z-index: 2;
+  bottom: 255px;
+  width: 22px;
+  height: 35px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 1s ease;
+}
+
+.carousel__arrow_right {
+  right: 0;
+}
+
+.carousel__arrow_left {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.carousel__arrow img,
+.carousel__arrow svg {
+  height: 35px;
 }
 
 .carousel__arrow_inactive {
@@ -48,7 +63,7 @@
   display: grid;
   grid-auto-columns: min-content;
   grid-auto-flow: column;
-  column-gap: 30px;
-  height: 604px;
+  column-gap: 35px;
+  height: 540px;
   transition: all 1s ease;
 }

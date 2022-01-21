@@ -13,36 +13,34 @@ export default class Carousel {
   #initCarousel(carousel) {
     let products = carousel.querySelector('.carousel__inner');
     let arrowRight = carousel.querySelector('.carousel__arrow_right');
-    let arrowRightImage = carousel.querySelector('.carousel__arrow_right img');
     let arrowLeft = carousel.querySelector('.carousel__arrow_left');
-    let arrowLeftImage = carousel.querySelector('.carousel__arrow_left img');
     let position = 0;
   
-    arrowLeftImage.classList.add('carousel__arrow_inactive');
+    arrowLeft.hidden = true;
   
     carousel.addEventListener('click', event => {
       let target = event.target.closest('div');
       let slidesWidth;
 
-      if (document.documentElement.clientWidth >= 1023) {
-        slidesWidth = 1053;
+      if (document.documentElement.clientWidth >= 1150) {
+        slidesWidth = 1185;
       }
   
-      if (target == arrowRight && !arrowRightImage.classList.contains('carousel__arrow_inactive')) {
+      if (target == arrowRight) {
         position -= slidesWidth;
-      } else if (target == arrowLeft && !arrowLeftImage.classList.contains('carousel__arrow_inactive')) {
+      } else if (target == arrowLeft) {
         position += slidesWidth;
       }
   
       products.style.transform = `translateX(${position}px)`;
       
       if (position == 0) {
-        arrowLeftImage.classList.add('carousel__arrow_inactive');
+        arrowLeft.hidden = true;
       } else if (position == -(this.products.length / 3 - 1) * slidesWidth) {
-        arrowRightImage.classList.add('carousel__arrow_inactive');
+        arrowRight.hidden = true;
       } else {
-        arrowLeftImage.classList.remove('carousel__arrow_inactive');
-        arrowRightImage.classList.remove('carousel__arrow_inactive');
+        arrowLeft.hidden = false;
+        arrowRight.hidden = false;
       }
     });
   }
@@ -50,25 +48,19 @@ export default class Carousel {
   #createCarousel() {
     let carousel = createElement(`
     <div class="carousel">
-      <div class="carousel__top">
-
-        <div class="carousel__name">
-          <div class="carousel__title">That is Our Best Offer</div>
-          <div class="carousel__desc">A coffee shop will help you to tell the audience what your business.</div>
-        </div>
-
-        <div class="carousel__arrows">
-
-          <div class="carousel__arrow_left">
-            <img src="/assets/images/icons/arrow-left.svg" alt="left">
-          </div>
-
-          <div class="carousel__arrow_right">
-            <img src="/assets/images/icons/arrow-right.svg" alt="right">
-          </div>
-
-        </div>
+      <div class="carousel__name">
+        <div class="carousel__title">That is Our Best Offer</div>
+        <div class="carousel__description">A coffee shop will help you to tell the audience what your business.</div>
       </div>
+
+      <div class="carousel__arrow carousel__arrow_left">
+       <img src="/assets/images/icons/arrow.svg" alt="left">
+      </div>
+
+      <div class="carousel__arrow carousel__arrow_right">
+        <img src="/assets/images/icons/arrow.svg" alt="right">
+      </div>
+    
       <div class="carousel__inner"></div>
     </div>
     `);

@@ -38,12 +38,12 @@ export default class ProductCard {
   #createCard() {
     let card = createElement(`
     <div class="card">
-      <img src="/assets/images/products/${this.#product.image}" class="card__image" alt="product">
+      <div class="card__image" style="background-image: url(/assets/images/products/${this.#product.image})"></div>
 
       <div class="card__top">
         <div class="card__price">$ ${this.#product.price.toFixed(2)}</div>
         <div class="card__title">${this.#product.name}</div>
-        <div class="card__desc">${this.#product.desc}</div>
+        <div class="card__description">${this.#product.desc}</div>
       </div>
     
       <div class="card__bottom">
