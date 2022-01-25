@@ -1,5 +1,5 @@
 import createElement from '../assets/lib/create-element.js';
-import ProductCard from '../3-product-card/index.js';
+import ProductCard from '../product-card/index.js';
 
 export default class Carousel {
   products = [];

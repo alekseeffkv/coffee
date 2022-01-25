@@ -1,7 +1,7 @@
 import createElement from '../assets/lib/create-element.js';
 import escapeHtml from '../assets/lib/escape-html.js';
 
-import Modal from '../5-modal/index.js';
+import Modal from '../modal/index.js';
 
 export default class Cart {
   cartItems = [];

@@ -1,11 +1,11 @@
-import Navigation from '../1-navigation/index.js';
-import navItems from '../1-navigation/nav-items.js';
+import Navigation from '../navigation/index.js';
+import navItems from '../navigation/nav-items.js';
 
-import CartIcon from '../2-cart-icon/index.js';
+import CartIcon from '../cart-icon/index.js';
 
-import Carousel from '../4-carousel/index.js';
+import Carousel from '../carousel/index.js';
 
-import Cart from '../6-cart/index.js';
+import Cart from '../cart/index.js';
 
 export default class Main {
 
