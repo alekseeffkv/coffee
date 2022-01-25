@@ -52,7 +52,7 @@ export default class ProductCard {
           <div class="card__plus"><img src="/assets/images/icons/plus.svg" alt="plus"></div>
           <div class="card__minus"><img src="/assets/images/icons/minus.svg" alt="minus"></div>
         </div>
-        <button type="button" class="card__button">Get Delivery</button>
+        <button type="button" class="card__button">Add to Cart</button>
       </div>
     </div>
     `);

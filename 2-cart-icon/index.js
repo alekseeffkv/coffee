@@ -17,6 +17,8 @@ export default class CartIcon {
         <div class="cart-icon__circle">
           <span class="cart-icon__count">${cart.getTotalCount()}</span>
         </div>`;
+    } else {
+      this.elem.innerHTML = '';
     }
   }
 }

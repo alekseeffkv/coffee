@@ -112,8 +112,8 @@
   border: none;
   background-color: var(--color-red);
   cursor: pointer;
-  font-family: var(--font-secondary);
-  font-weight: 700;
+  font-family: var(--font-primary);
+  font-weight: 600;
   font-size: 18px;
   color: var(--color-white);
   margin-right: 40px;

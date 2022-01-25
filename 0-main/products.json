@@ -21,45 +21,45 @@
     "id": "indonesian-coffe-beans"
   },
   {
-    "name": "Vietnam coffe beans",
+    "name": "Ethiopian coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
     "price": 4.99,
     "image": "vietnam_coffe_beans.png",
-    "id": "vietnam-coffe-beans"
+    "id": "ethiopian-coffe-beans"
   },
   {
-    "name": "Indonesian coffe beans",
+    "name": "Indian coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
     "price": 3.99,
     "image": "indonesian_coffe_beans.png",
-    "id": "indonesian-coffe-beans"
+    "id": "indian-coffe-beans"
   },
   {
-    "name": "Brazilian coffe beans",
+    "name": "Colombian coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
     "price": 5.99,
     "image": "brazilian_coffe_beans.png",
-    "id": "brazilian-coffe-beans"
+    "id": "colombian-coffe-beans"
   },
   {
-    "name": "Indonesian coffe beans",
+    "name": "Australian coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
     "price": 3.99,
     "image": "indonesian_coffe_beans.png",
-    "id": "indonesian-coffe-beans"
+    "id": "australian-coffe-beans"
   },
   {
-    "name": "Brazilian coffe beans",
+    "name": "Tanzanian coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
     "price": 5.99,
     "image": "brazilian_coffe_beans.png",
-    "id": "brazilian-coffe-beans"
+    "id": "tanzanian-coffe-beans"
   },
   {
-    "name": "Vietnam coffe beans",
+    "name": "Honduran coffe beans",
     "desc": "Coffee that’s always you handle your own the way you like.",
     "price": 4.99,
     "image": "vietnam_coffe_beans.png",
-    "id": "vietnam-coffe-beans"
+    "id": "honduran-coffe-beans"
   }
 ]

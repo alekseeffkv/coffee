@@ -16,7 +16,7 @@
 .modal__overlay {
   height: 100%;
   width: 100%;
-  background-color: #918f79;
+  background-color: var(--color-grey);
   opacity: 0.8;
 }
 
@@ -25,11 +25,24 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 994px;
+  max-width: 950px;
   width: 100%;
+  height: calc(100vh - 40px);
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+}
+
+.modal__body-inner {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--color-black);
+  text-align: center;
+  line-height: 1.2;
+  color: var(--color-black);
+  padding: 40px 33px;
 }
 
 .modal__header {
@@ -38,16 +51,14 @@
 }
 
 .modal__body {
-  padding: 0 80px 64px;
+  padding: 0 80px 10px;
 }
 
 .modal__title {
   font-size: 36px;
-  line-height: 1.8;
   font-family: var(--font-secondary);
-  font-weight: 400;
-  color: var(--color-yellow);
-  margin: 0;
+  font-weight: 700;
+  color: var(--color-black);
   text-align: center;
   text-transform: uppercase;
 }
@@ -57,8 +68,22 @@
   top: 24px;
   right: 24px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
-.modal__close:hover {
-  opacity: 0.8;
+.modal__close svg {
+  transform: rotate(45deg);
+  width: 25px;
+  height: 25px;
+}
+
+.modal__close path {
+  stroke: var(--color-grey);
+  transition: all 0.2s ease;
+}
+
+.modal__close:hover path {
+  stroke: var(--color-black);
+  transition: all 0.2s ease;
 }
