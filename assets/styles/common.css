@@ -17,6 +17,7 @@
 
 html {
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -101,6 +102,12 @@ html {
   font-weight: 600;
   font-size: 18px;
   margin-top: 20px;
+  transition: all 0.2s ease;
+}
+
+.hero__button:hover {
+  opacity: 0.8;
+  transition: all 0.2s ease;
 }
 
 [data-carousel-holder] {

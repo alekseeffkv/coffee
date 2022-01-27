@@ -105,6 +105,26 @@
   cursor: pointer;
 }
 
+.card__plus path {
+  stroke: var(--color-grey);
+  transition: all 0.2s ease;
+}
+
+.card__minus path {
+  stroke: var(--color-grey);
+  transition: all 0.2s ease;
+}
+
+.card__plus:hover path {
+  stroke: var(--color-black);
+  transition: all 0.2s ease;
+}
+
+.card__minus:hover path {
+  stroke: var(--color-black);
+  transition: all 0.2s ease;
+}
+
 .card__button {
   width: 167px;
   height: 100%;
@@ -117,4 +137,10 @@
   font-size: 18px;
   color: var(--color-white);
   margin-right: 40px;
+  transition: all 0.2s ease;
+}
+
+.card__button:hover {
+  opacity: 0.8;
+  transition: all 0.2s ease;
 }

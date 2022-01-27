@@ -49,8 +49,17 @@ export default class ProductCard {
       <div class="card__bottom">
         <div class="card__inner">
           <div class="card__count">${this.#count}</div>
-          <div class="card__plus"><img src="/assets/images/icons/plus.svg" alt="plus"></div>
-          <div class="card__minus"><img src="/assets/images/icons/minus.svg" alt="minus"></div>
+          <div class="card__plus">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 1V11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 6H11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="card__minus">
+            <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
         </div>
         <button type="button" class="card__button">Add to Cart</button>
       </div>
