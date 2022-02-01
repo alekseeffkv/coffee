@@ -20,8 +20,6 @@ class Main {
   }
 
   async render() {
-
-
     const header = new Header();
     document.body.prepend(header.elem);
 
@@ -40,13 +38,14 @@ class Main {
     const carousel = new Carousel(products);
     document.querySelector('[data-carousel-holder]').append(carousel.elem);
 
-    document.body.addEventListener('product-add', event => {
+    carousel.elem.addEventListener('product-add', event => {
       let addedProduct = products.find(product => product.id == event.detail.productID);
       cart.addProduct(addedProduct, event.detail.productCount);
     });
 
     const gallery = new Gallery(images);
     document.querySelector('[data-gallery-holder]').append(gallery.elem);
+    gallery.showMore();
   }
 }
 

@@ -40,6 +40,6 @@ module.exports = {
     hot: true,
     open: true,
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   mode: prodMode ? 'production' : 'development',
 }
