@@ -1,0 +1,30 @@
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap";
+
+:root {
+  --color-white: #fff;
+  --color-red: #FF4B32;
+  --color-black: #000000;
+  --color-grey: #b6b4a2;
+  --font-primary: "Open Sans";
+  --font-secondary: "Josefin Sans";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+[data-carousel-holder] {
+  margin-top: 60px;
+}

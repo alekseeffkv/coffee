@@ -105,6 +105,16 @@
   cursor: pointer;
 }
 
+.card__plus svg {
+  width: 12px;
+  height: 12px;
+}
+
+.card__minus svg {
+  width: 12px;
+  height: 2px;
+}
+
 .card__plus path {
   stroke: var(--color-grey);
   transition: all 0.2s ease;

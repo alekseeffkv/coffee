@@ -1,4 +1,7 @@
-import createElement from '../../assets/lib/create-element.js';
+import createElement from '../../lib/create-element';
+import './index.css';
+import plus from '../../icons/plus.svg';
+import minus from '../../icons/minus.svg';
 
 export default class ProductCard {
   #product = {};
@@ -38,7 +41,7 @@ export default class ProductCard {
   #createCard() {
     let card = createElement(`
     <div class="card">
-      <div class="card__image" style="background-image: url(/assets/images/products/${this.#product.image})"></div>
+      <div class="card__image" style="background-image: url(/src/components/product-card/images/${this.#product.image})"></div>
 
       <div class="card__top">
         <div class="card__price">$ ${this.#product.price.toFixed(2)}</div>
@@ -50,15 +53,10 @@ export default class ProductCard {
         <div class="card__inner">
           <div class="card__count">${this.#count}</div>
           <div class="card__plus">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 1V11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M1 6H11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            ${plus}
           </div>
           <div class="card__minus">
-            <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1H11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            ${minus}
           </div>
         </div>
         <button type="button" class="card__button">Add to Cart</button>

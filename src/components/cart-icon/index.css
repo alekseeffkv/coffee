@@ -3,13 +3,28 @@
   height: 46px;
   cursor: pointer;
   transition: all 0.5s ease;
-  background: url("/assets/images/icons/cart-icon.svg");
-  background-repeat: no-repeat;
-  background-size: 41px auto;
-  background-position: left bottom;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  position: relative;
+}
+
+.cart-icon path {
+  stroke: var(--color-white);
+  transition: all 0.2s ease;
+}
+
+.cart-icon:hover path {
+  stroke: var(--color-red);
+  transition: all 0.2s ease;
+}
+
+.cart-icon svg {
+  width: 41px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .cart-icon__circle {
@@ -20,6 +35,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .cart-icon__count {

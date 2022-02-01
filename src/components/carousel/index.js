@@ -1,5 +1,7 @@
-import createElement from '../assets/lib/create-element.js';
-import ProductCard from '../product-card/index.js';
+import createElement from '../../lib/create-element';
+import ProductCard from '../product-card';
+import './index.css';
+import arrow from '../../icons/arrow.svg';
 
 export default class Carousel {
   products = [];
@@ -54,11 +56,11 @@ export default class Carousel {
       </div>
 
       <div class="carousel__arrow carousel__arrow_left">
-       <img src="/assets/images/icons/arrow.svg" alt="left">
+       ${arrow}
       </div>
 
       <div class="carousel__arrow carousel__arrow_right">
-        <img src="/assets/images/icons/arrow.svg" alt="right">
+        ${arrow}
       </div>
     
       <div class="carousel__inner"></div>
