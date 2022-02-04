@@ -11,19 +11,23 @@ export default class CartIcon {
   }
 
   render() {
-    this.elem = createElement(`<div class="cart-icon">${cartIcon}</div>`);
+    this.elem = createElement(`
+    <div class="cart-icon">
+      ${cartIcon}
+      <div class="cart-icon__circle hidden"></div>
+    </div>
+    `);
   }
 
   update(cart) {
+    const counterContainer = this.elem.querySelector('.cart-icon__circle');
+
     if (!cart.isEmpty()) {
-      this.#counter = createElement(`
-      <div class="cart-icon__circle">
-          <span class="cart-icon__count">${cart.getTotalCount()}</span>
-        </div>
-      `);
-      this.elem.append(this.#counter);
+      this.#counter = `<span class="cart-icon__count">${cart.getTotalCount()}</span>`;
+      counterContainer.innerHTML = this.#counter;
+      counterContainer.classList.remove('hidden');
     } else {
-      this.#counter.remove();
+      counterContainer.classList.add('hidden');
     }
   }
 }

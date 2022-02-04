@@ -1,5 +1,6 @@
 import createElement from '../../lib/create-element';
 import './index.css';
+import plus from '../../icons/plus.svg';
 
 export default class Modal {
   elem = null;
@@ -16,10 +17,7 @@ export default class Modal {
       <div class="modal__inner">
         <div class="modal__header">
           <button type="button" class="modal__close">
-            <svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 1V11" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M1 6H11" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            ${plus}
           </button>
 
           <h3 class="modal__title"></h3>

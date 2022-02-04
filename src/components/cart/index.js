@@ -2,6 +2,8 @@ import createElement from '../../lib/create-element';
 import escapeHtml from '../../lib/escape-html';
 import Modal from '../modal';
 import './index.css';
+import minus from '../../icons/minus.svg';
+import plus from '../../icons/plus.svg';
 
 export default class Cart {
   cartItems = [];
@@ -59,23 +61,18 @@ export default class Cart {
     return createElement(`
     <div class="cart-product" data-product-id="${product.id}">
       <div class="cart-product__img">
-        <img src="/assets/images/products/${product.image}" alt="product">
+        <img src="/src/components/product-card/images/${product.image}" alt="product">
       </div>
       <div class="cart-product__info">
         <div class="cart-product__title">${escapeHtml(product.name)}</div>
         <div class="cart-product__price-wrap">
           <div class="cart-counter">
             <button type="button" class="cart-counter__button cart-counter__button_minus">
-              <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1H11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+              ${minus}
             </button>
             <span class="cart-counter__count">${count}</span>
             <button type="button" class="cart-counter__button cart-counter__button_plus">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 1V11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M1 6H11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+              ${plus}
             </button>
           </div>
           <div class="cart-product__price">$ ${(count * product.price).toFixed(2)}</div>
@@ -187,7 +184,7 @@ export default class Cart {
 
         this.cartIcon.update(this);
       });
-  };
+  }
 
   addEventListeners() {
     this.cartIcon.elem.onclick = () => this.renderModal();
