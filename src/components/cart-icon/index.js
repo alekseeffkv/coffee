@@ -1,5 +1,5 @@
 import createElement from '../../lib/create-element';
-import cartIcon from '../../icons/cart-icon.svg';
+import cartIcon from '../../icons/cart.svg';
 import './index.css';
 
 export default class CartIcon {

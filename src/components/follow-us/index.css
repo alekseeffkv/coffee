@@ -1,0 +1,139 @@
+.follow {
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/src/components/follow-us/follow_us.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.follow__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+}
+
+.follow__title {
+  width: 115px;
+  height: 60px;
+  border-bottom: 2px solid var(--color-red);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color-red);
+}
+
+.follow__text {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 43px;
+  line-height: 130%;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.follow__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  height: 180px;
+}
+
+.follow__phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+}
+
+.follow__phone-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.follow__phone-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.follow__number {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.follow__number:hover {
+  color: var(--color-red);
+}
+
+.follow__email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+}
+
+.follow__email-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.follow__email-icon svg {
+  width: 20px;
+  height: 16px;
+  margin-top: 4px;
+}
+
+.follow__address {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.follow__address:hover {
+  color: var(--color-red);
+}
+
+.follow__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+}
+
+.follow__twitter svg,
+.follow__facebook svg,
+.follow__instagram svg,
+.follow__linkedin svg {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.follow__twitter path,
+.follow__facebook path,
+.follow__instagram path,
+.follow__linkedin path {
+  stroke: var(--color-white);
+  transition: all 0.2s ease;
+}
+
+.follow__twitter:hover svg *,
+.follow__facebook:hover svg *,
+.follow__instagram:hover svg *,
+.follow__linkedin:hover svg * {
+  stroke: var(--color-red);
+  transition: all 0.2s ease;
+}

@@ -14,6 +14,10 @@ import Cart from './components/cart';
 import Gallery from './components/gallery';
 import images from './components/gallery/images.js';
 
+import FollowUs from './components/follow-us';
+import contactItems from './components/follow-us/contact-items';
+
+
 class Main {
 
   constructor() {
@@ -46,6 +50,9 @@ class Main {
     const gallery = new Gallery(images);
     document.querySelector('[data-gallery-holder]').append(gallery.elem);
     gallery.showMore();
+
+    const followUs = new FollowUs(contactItems);
+    document.querySelector('[data-follow-holder]').append(followUs.elem);
   }
 }
 
