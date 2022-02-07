@@ -25,14 +25,9 @@ html {
   margin: 0 auto;
 }
 
-[data-carousel-holder] {
-  margin-top: 60px;
-}
-
-[data-gallery-holder] {
-  margin-top: 60px;
-}
-
-[data-follow-holder] {
+[data-carousel-holder],
+[data-gallery-holder],
+[data-follow-holder],
+[data-news-holder] {
   margin-top: 60px;
 }

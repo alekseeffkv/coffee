@@ -17,6 +17,8 @@ import images from './components/gallery/images.js';
 import FollowUs from './components/follow-us';
 import contactItems from './components/follow-us/contact-items';
 
+import News from './components/news';
+import newsItems from './components/news/news-items';
 
 class Main {
 
@@ -53,6 +55,9 @@ class Main {
 
     const followUs = new FollowUs(contactItems);
     document.querySelector('[data-follow-holder]').append(followUs.elem);
+
+    const news = new News(newsItems);
+    document.querySelector('[data-news-holder]').append(news.elem);
   }
 }
 

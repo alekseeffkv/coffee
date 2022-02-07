@@ -44,24 +44,24 @@ export default class FollowUs {
 
   #createFollowUs() {
     const followUs = createElement(`
-    <div class=follow>
-      <div class=follow__info>
-        <div class=follow__title>Follow US</div>
-        <div class=follow__text>Have an inquiry?<br>Text or call and ask Something.</div>
-        <div class=follow__contact>
-          <div class=follow__phone>
-            <div class=follow__phone-icon>${phone}</div>
-            <div class=follow__number>${this.contactItems.phone}</div>
+    <div class="follow">
+      <div class="follow__info">
+        <div class="follow__title">Follow US</div>
+        <div class="follow__text">Have an inquiry?<br>Text or call and ask Something.</div>
+        <div class="follow__contact">
+          <div class="follow__phone">
+            <div class="follow__phone-icon">${phone}</div>
+            <div class="follow__number">${this.contactItems.phone}</div>
           </div>
-          <div class=follow__email>
-            <div class=follow__email-icon>${email}</div>
-            <div class=follow__address>${this.contactItems.email}</div>
+          <div class="follow__email">
+            <div class="follow__email-icon">${email}</div>
+            <div class="follow__address">${this.contactItems.email}</div>
           </div>
-          <div class=follow__social>
-            <div class=follow__twitter>${twitter}</div>
-            <div class=follow__facebook>${facebook}</div>
-            <div class=follow__instagram>${instagram}</div>
-            <div class=follow__linkedin>${linkedin}</div>
+          <div class="follow__social">
+            <div class="follow__twitter">${twitter}</div>
+            <div class="follow__facebook">${facebook}</div>
+            <div class="follow__instagram">${instagram}</div>
+            <div class="follow__linkedin">${linkedin}</div>
           </div>
         </div>
       </div>
