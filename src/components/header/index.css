@@ -16,7 +16,24 @@
 
 .hero__header {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__header_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--color-black);
+  width: 100%;
+  height: 70px;
+}
+
+.hero__header-inner {
+  display: flex;
   justify-content: space-between;
+  width: 1150px;
 }
 
 .hero__logo {

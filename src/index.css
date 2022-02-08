@@ -27,8 +27,11 @@ html {
 
 [data-carousel-holder],
 [data-gallery-holder],
-[data-follow-holder],
 [data-news-holder],
 [data-footer-holder] {
+  margin-top: 75px;
+}
+
+[data-follow-holder] {
   margin-top: 60px;
 }
