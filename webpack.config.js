@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const prodMode = false; //process.env.NODE_ENV === 'production';
+const prodMode = true; //process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: './src',
@@ -40,6 +40,6 @@ module.exports = {
     hot: true,
     open: true,
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   mode: prodMode ? 'production' : 'development',
 }
