@@ -20,6 +20,8 @@ import contactItems from './components/follow-us/contact-items';
 import News from './components/news';
 import newsItems from './components/news/news-items';
 
+import Footer from './components/footer';
+
 class Main {
 
   constructor() {
@@ -58,6 +60,9 @@ class Main {
 
     const news = new News(newsItems);
     document.querySelector('[data-news-holder]').append(news.elem);
+
+    const footer = new Footer(contactItems);
+    document.querySelector('[data-footer-holder]').append(footer.elem);
   }
 }
 

@@ -5,18 +5,18 @@ export default [
   },
   {
     title: 'Menu',
-    link: '#'
+    link: '#carousel'
   },
   {
     title: 'Gallary',
-    link: '#'
+    link: '#gallery'
   },
   {
     title: 'News',
-    link: '#'
+    link: '#news'
   },
   {
     title: 'Contact',
-    link: '#'
+    link: '#follow'
   }
 ];

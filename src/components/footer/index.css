@@ -1,0 +1,196 @@
+.footer {
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+}
+
+.footer__inner {
+  width: 1150px;
+  height: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__body {
+  width: 1150px;
+  min-height: 195px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__begin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer__logo svg {
+  width: 46px;
+  height: 50px;
+}
+
+.footer__logo-text {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-red);
+  margin-left: 9px;
+}
+
+.footer__creating {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--color-white);
+  width: 250px;
+}
+
+.footer__phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+.footer__phone-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__phone-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__number {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.footer__number:hover {
+  color: var(--color-red);
+}
+
+.footer__categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.footer__cat-title {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.footer__info-title {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+.footer__follow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.footer__follow-title {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+.footer__categories a,
+.footer__info a {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.footer__categories a:hover,
+.footer__info a:hover {
+  color: var(--color-red);
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 245px;
+  margin-bottom: 55px;
+}
+
+.footer__twitter svg,
+.footer__facebook svg,
+.footer__instagram svg,
+.footer__linkedin svg {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.footer__twitter path,
+.footer__facebook path,
+.footer__instagram path,
+.footer__linkedin path {
+  stroke: var(--color-white);
+  transition: all 0.2s ease;
+}
+
+.footer__twitter:hover svg *,
+.footer__facebook:hover svg *,
+.footer__instagram:hover svg *,
+.footer__linkedin:hover svg * {
+  stroke: var(--color-red);
+  transition: all 0.2s ease;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-white);
+  width: 1150px;
+  height: 50px;
+  border-top: 1px solid var(--color-white);
+  opacity: 0.4;
+}
