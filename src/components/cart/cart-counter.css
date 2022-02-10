@@ -45,3 +45,9 @@
   font-size: 21px;
   color: var(--color-black);
 }
+
+@media (max-width: 480px) {
+  .cart-counter {
+    padding: 10px;
+  }
+}

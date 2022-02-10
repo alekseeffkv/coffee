@@ -18,3 +18,15 @@
   color: var(--color-red);
   opacity: 1;
 }
+
+@media (max-width: 480px) {
+  .navigation {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .navigation__item {
+    padding: 5px 20px;
+    width: max-content;
+  }
+}

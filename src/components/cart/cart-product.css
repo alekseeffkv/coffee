@@ -26,8 +26,7 @@
 }
 
 .cart-product__price {
-  max-width: 135px;
-  width: 100%;
+  width: 135px;
   text-align: right;
   font-family: var(--font-secondary);
   font-weight: 500;
@@ -61,5 +60,20 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 260px;
+  max-width: 260px;
+}
+
+@media (max-width: 480px) {
+  .cart-product__img {
+    display: none;
+  }
+
+  .cart-product__title {
+    padding: 10px;
+  }
+
+  .cart-product__price {
+    padding: 10px;
+    width: 100px;
+  }
 }

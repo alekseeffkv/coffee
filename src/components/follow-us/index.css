@@ -1,5 +1,5 @@
 .follow {
-  height: 650px;
+  min-height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 450px;
+  min-height: 450px;
 }
 
 .follow__title {
@@ -41,8 +41,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 350px;
-  height: 180px;
+  max-width: 350px;
+  min-height: 180px;
 }
 
 .follow__phone {

@@ -35,3 +35,15 @@ html {
 [data-follow-holder] {
   margin-top: 60px;
 }
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 360px;
+  }
+
+  [data-carousel-holder],
+  [data-gallery-holder],
+  [data-news-holder] {
+    margin-top: 90px;
+  }
+}

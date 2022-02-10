@@ -46,3 +46,9 @@
 .cart-form__input::placeholder {
   color: var(--color-grey);
 }
+
+@media (max-width: 480px) {
+  .cart-form__group.cart-form__group_row {
+    grid-template-columns: 1fr;
+  }
+}

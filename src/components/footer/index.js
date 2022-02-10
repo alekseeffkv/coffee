@@ -22,10 +22,10 @@ export default class Footer {
       <div class="footer__inner">
         <div class="footer__body">
           <div class="footer__begin">
-            <div class="footer__logo">
+            <a href="/" class="footer__logo">
               ${logo}
               <div class="footer__logo-text">Coffee</div>
-            </div>
+            </a>
             <div class="footer__creating">Creating a catchy tagline coffee shop business growth.</div>
             <div class="footer__phone">
               <div class="footer__phone-icon">${phone}</div>

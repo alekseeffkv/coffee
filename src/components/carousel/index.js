@@ -23,9 +23,15 @@ export default class Carousel {
     carousel.addEventListener('click', event => {
       let target = event.target.closest('div');
       let slidesWidth;
+      let slidesAmount;
 
       if (document.documentElement.clientWidth >= 1150) {
         slidesWidth = 1185;
+        slidesAmount = 3;
+
+      } else {
+        slidesWidth = 395;
+        slidesAmount = 1;
       }
   
       if (target == arrowRight) {
@@ -38,7 +44,7 @@ export default class Carousel {
       
       if (position == 0) {
         arrowLeft.hidden = true;
-      } else if (position == -(this.products.length / 3 - 1) * slidesWidth) {
+      } else if (position == -(this.products.length / slidesAmount - 1) * slidesWidth) {
         arrowRight.hidden = true;
       } else {
         arrowLeft.hidden = false;
