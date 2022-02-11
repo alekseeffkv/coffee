@@ -5,7 +5,9 @@ import minus from '../../icons/minus.svg';
 
 export default class ProductCard {
   #product = {};
+
   #count = 0;
+
   elem = null;
 
   constructor(product) {
@@ -14,7 +16,7 @@ export default class ProductCard {
     this.elem = this.#createCard();
   }
 
-  #onCardClick = e => {
+  #onCardClick = (e) => {
     if (e.target.closest('.card__plus')) {
       this.#count += 1;
       this.elem.querySelector('.card__count').textContent = this.#count;
@@ -28,20 +30,24 @@ export default class ProductCard {
     }
 
     if (e.target.closest('.card__button')) {
-      this.elem.dispatchEvent(new CustomEvent("product-add", {
-        detail: {
-          productID: this.#product.id,
-          productCount: this.#count
-        },
-        bubbles: true
-      }));
+      this.elem.dispatchEvent(
+        new CustomEvent('product-add', {
+          detail: {
+            productID: this.#product.id,
+            productCount: this.#count,
+          },
+          bubbles: true,
+        }),
+      );
     }
-  }
+  };
 
   #createCard() {
-    let card = createElement(`
+    const card = createElement(`
     <div class="card">
-      <div class="card__image" style="background-image: url(/src/components/product-card/images/${this.#product.image})"></div>
+      <div class="card__image"
+      style="background-image: url(/src/components/product-card/images/${this.#product.image})">
+      </div>
 
       <div class="card__top">
         <div class="card__price">$ ${this.#product.price.toFixed(2)}</div>

@@ -16,5 +16,5 @@ export default [
   'image-15.png',
   'image-16.png',
   'image-17.png',
-  'image-18.png'
+  'image-18.png',
 ];

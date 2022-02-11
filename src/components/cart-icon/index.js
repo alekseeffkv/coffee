@@ -4,6 +4,7 @@ import './index.css';
 
 export default class CartIcon {
   elem = null;
+
   #counter = null;
 
   constructor() {

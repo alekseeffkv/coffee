@@ -9,6 +9,7 @@ import linkedin from '../../icons/linkedin.svg';
 
 export default class Footer {
   contactItems = {};
+
   elem = null;
 
   constructor(contactItems) {
@@ -26,10 +27,14 @@ export default class Footer {
               ${logo}
               <div class="footer__logo-text">Coffee</div>
             </a>
-            <div class="footer__creating">Creating a catchy tagline coffee shop business growth.</div>
+            <div class="footer__creating">
+              Creating a catchy tagline coffee shop business growth.
+            </div>
             <div class="footer__phone">
               <div class="footer__phone-icon">${phone}</div>
-              <a href="tel:${this.contactItems.phone}" class="footer__number">${this.contactItems.phone}</a>
+              <a href="tel:${this.contactItems.phone}" class="footer__number">
+                ${this.contactItems.phone}
+              </a>
             </div>
           </div>
 
@@ -50,10 +55,18 @@ export default class Footer {
           <div class="footer__follow">
             <div class="footer__follow-title">FOLLOW US</div>
             <div class="footer__social">
-              <a href="${this.contactItems.twitter}" target="_blank" class="footer__twitter">${twitter}</a>
-              <a href="${this.contactItems.facebook}" target="_blank" class="footer__facebook">${facebook}</a>
-              <a href="${this.contactItems.instagram}" target="_blank" class="footer__instagram">${instagram}</a>
-              <a href="${this.contactItems.linkedin}" target="_blank" class="footer__linkedin">${linkedin}</a>
+              <a href="${this.contactItems.twitter}" target="_blank" class="footer__twitter">
+                ${twitter}
+              </a>
+              <a href="${this.contactItems.facebook}" target="_blank" class="footer__facebook">
+                ${facebook}
+              </a>
+              <a href="${this.contactItems.instagram}" target="_blank" class="footer__instagram">
+                ${instagram}
+              </a>
+              <a href="${this.contactItems.linkedin}" target="_blank" class="footer__linkedin">
+                ${linkedin}
+              </a>
             </div>
           </div>
         </div>

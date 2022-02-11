@@ -5,6 +5,7 @@ import arrow from '../../icons/arrow.svg';
 
 export default class Carousel {
   products = [];
+
   elem = null;
 
   constructor(products) {
@@ -13,38 +14,37 @@ export default class Carousel {
   }
 
   #initCarousel(carousel) {
-    let products = carousel.querySelector('.carousel__inner');
-    let arrowRight = carousel.querySelector('.carousel__arrow_right');
-    let arrowLeft = carousel.querySelector('.carousel__arrow_left');
+    const products = carousel.querySelector('.carousel__inner');
+    const arrowRight = carousel.querySelector('.carousel__arrow_right');
+    const arrowLeft = carousel.querySelector('.carousel__arrow_left');
     let position = 0;
-  
+
     arrowLeft.hidden = true;
-  
-    carousel.addEventListener('click', event => {
-      let target = event.target.closest('div');
+
+    carousel.addEventListener('click', (event) => {
+      const target = event.target.closest('div');
       let slidesWidth;
       let slidesAmount;
 
       if (document.documentElement.clientWidth >= 1150) {
         slidesWidth = 1185;
         slidesAmount = 3;
-
       } else {
         slidesWidth = 395;
         slidesAmount = 1;
       }
-  
-      if (target == arrowRight) {
+
+      if (target === arrowRight) {
         position -= slidesWidth;
-      } else if (target == arrowLeft) {
+      } else if (target === arrowLeft) {
         position += slidesWidth;
       }
-  
+
       products.style.transform = `translateX(${position}px)`;
-      
-      if (position == 0) {
+
+      if (position === 0) {
         arrowLeft.hidden = true;
-      } else if (position == -(this.products.length / slidesAmount - 1) * slidesWidth) {
+      } else if (position === -(this.products.length / slidesAmount - 1) * slidesWidth) {
         arrowRight.hidden = true;
       } else {
         arrowLeft.hidden = false;
@@ -54,11 +54,13 @@ export default class Carousel {
   }
 
   #createCarousel() {
-    let carousel = createElement(`
+    const carousel = createElement(`
     <div class="carousel">
       <div class="carousel__name">
         <div class="carousel__title">That is Our Best Offer</div>
-        <div class="carousel__description">A coffee shop will help you to tell the audience what your business.</div>
+        <div class="carousel__description">
+        A coffee shop will help you to tell the audience what your business.
+        </div>
       </div>
 
       <div class="carousel__arrow carousel__arrow_left">
@@ -73,8 +75,9 @@ export default class Carousel {
     </div>
     `);
 
-    this.products.map(product => new ProductCard(product))
-                 .map(productCard => carousel.querySelector('.carousel__inner').append(productCard.elem));
+    this.products
+      .map((product) => new ProductCard(product))
+      .map((productCard) => carousel.querySelector('.carousel__inner').append(productCard.elem));
 
     this.#initCarousel(carousel);
 

@@ -9,6 +9,7 @@ import linkedin from '../../icons/linkedin.svg';
 
 export default class FollowUs {
   contactItems = {};
+
   elem = null;
 
   constructor(contactItems) {
@@ -16,7 +17,7 @@ export default class FollowUs {
     this.elem = this.#createFollowUs();
   }
 
-  #onContactClick = e => {
+  #onContactClick = (e) => {
     if (e.target.closest('.follow__number')) {
       document.location.href = `tel:${this.contactItems.phone}`;
     }
@@ -26,21 +27,21 @@ export default class FollowUs {
     }
 
     if (e.target.closest('.follow__twitter')) {
-      window.open(this.contactItems.twitter,'_blank');
+      window.open(this.contactItems.twitter, '_blank');
     }
 
     if (e.target.closest('.follow__facebook')) {
-      window.open(this.contactItems.facebook,'_blank');
+      window.open(this.contactItems.facebook, '_blank');
     }
 
     if (e.target.closest('.follow__instagram')) {
-      window.open(this.contactItems.instagram,'_blank');
+      window.open(this.contactItems.instagram, '_blank');
     }
 
     if (e.target.closest('.follow__linkedin')) {
-      window.open(this.contactItems.linkedin,'_blank');
+      window.open(this.contactItems.linkedin, '_blank');
     }
-  }
+  };
 
   #createFollowUs() {
     const followUs = createElement(`

@@ -1,22 +1,22 @@
 export default [
   {
     title: 'Home',
-    link: '#'
+    link: '#',
   },
   {
     title: 'Menu',
-    link: '#carousel'
+    link: '#carousel',
   },
   {
     title: 'Gallary',
-    link: '#gallery'
+    link: '#gallery',
   },
   {
     title: 'News',
-    link: '#news'
+    link: '#news',
   },
   {
     title: 'Contact',
-    link: '#follow'
-  }
+    link: '#follow',
+  },
 ];

@@ -17,10 +17,10 @@ export default class Cart {
   addProduct(product, count) {
     if (product === null || product === undefined) return;
 
-    let itemIndex = this.cartItems.findIndex(item => item.product.id == product.id);
-    
-    if (itemIndex == -1) {
-      this.cartItems.push({product, count: count});
+    const itemIndex = this.cartItems.findIndex((item) => item.product.id === product.id);
+
+    if (itemIndex === -1) {
+      this.cartItems.push({ product, count });
     } else {
       this.cartItems[itemIndex].count += count;
     }
@@ -29,16 +29,16 @@ export default class Cart {
   }
 
   updateProductCount(productId, amount) {
-    let itemIndex = this.cartItems.findIndex(item => item.product.id == productId);
-    let modifiedItem = this.cartItems[itemIndex];
-    
-    if (amount == 1) {
+    const itemIndex = this.cartItems.findIndex((item) => item.product.id === productId);
+    const modifiedItem = this.cartItems[itemIndex];
+
+    if (amount === 1) {
       modifiedItem.count += 1;
-    } else if (amount == -1) {
+    } else if (amount === -1) {
       modifiedItem.count -= 1;
     }
 
-    if (modifiedItem.count == 0) {
+    if (modifiedItem.count === 0) {
       this.cartItems.splice(itemIndex, 1);
     }
 
@@ -46,7 +46,7 @@ export default class Cart {
   }
 
   isEmpty() {
-    return this.cartItems.length == 0 ? true : false;
+    return this.cartItems.length === 0;
   }
 
   getTotalCount() {
@@ -54,7 +54,10 @@ export default class Cart {
   }
 
   getTotalPrice() {
-    return this.cartItems.reduce((totalPrice, item) => totalPrice + item.count * item.product.price, 0);
+    return this.cartItems.reduce(
+      (totalPrice, item) => totalPrice + item.count * item.product.price,
+      0,
+    );
   }
 
   renderProduct(product, count) {
@@ -86,12 +89,18 @@ export default class Cart {
     <form class="cart-form">
       <h5 class="cart-form__title">Delivery</h5>
       <div class="cart-form__group cart-form__group_row">
-        <input name="name" type="text" class="cart-form__input" placeholder="Name" required value="John Smith">
-        <input name="email" type="email" class="cart-form__input" placeholder="Email" required value="john@gmail.com">
-        <input name="tel" type="tel" class="cart-form__input" placeholder="Phone" required value="+1234567">
+        <input name="name" type="text" class="cart-form__input"
+        placeholder="Name" required value="John Smith">
+
+        <input name="email" type="email" class="cart-form__input"
+        placeholder="Email" required value="john@gmail.com">
+
+        <input name="tel" type="tel" class="cart-form__input"
+        placeholder="Phone" required value="+1234567">
       </div>
       <div class="cart-form__group">
-        <input name="address" type="text" class="cart-form__input" placeholder="Address" required value="Madison Avenue, New York, USA">
+        <input name="address" type="text" class="cart-form__input"
+        placeholder="Address" required value="Madison Avenue, New York, USA">
       </div>
       <div class="cart-buttons">
         <div class="cart-buttons__buttons btn-group">
@@ -106,24 +115,24 @@ export default class Cart {
   }
 
   renderModal() {
-    if(this.isEmpty()) return;
+    if (this.isEmpty()) return;
 
     this.modal = new Modal();
 
     this.modal.setTitle('Your order');
 
-    let modalBody = document.createElement('div');
+    const modalBody = document.createElement('div');
     modalBody.innerHTML = `
-      ${this.cartItems.map(item => this.renderProduct(item.product, item.count).outerHTML).join('')}
+    ${this.cartItems.map((item) => this.renderProduct(item.product, item.count).outerHTML).join('')}
       ${this.renderOrderForm().outerHTML}
     `;
     this.modal.setBody(modalBody);
 
     this.modal.open();
 
-    modalBody.addEventListener('click', event => {
-      let target = event.target;
-      let productTarget = target.closest('.cart-product');
+    modalBody.addEventListener('click', (event) => {
+      const target = event.target;
+      const productTarget = target.closest('.cart-product');
 
       if (target.closest('.cart-counter__button_minus')) {
         this.updateProductCount(productTarget.dataset.productId, -1);
@@ -132,7 +141,9 @@ export default class Cart {
       }
     });
 
-    document.querySelector('.cart-form').addEventListener('submit', event => this.onSubmit(event));
+    document
+      .querySelector('.cart-form')
+      .addEventListener('submit', (event) => this.onSubmit(event));
   }
 
   onProductUpdate(cartItem) {
@@ -140,14 +151,18 @@ export default class Cart {
 
     if (!document.body.classList.contains('is-modal-open')) return;
 
-    let productId = cartItem.product.id;
-    let modalBody = document.querySelector('.modal__body');
-    let productElement = modalBody.querySelector(`[data-product-id="${productId}"]`);
-    let productCount = modalBody.querySelector(`[data-product-id="${productId}"] .cart-counter__count`);
-    let productPrice = modalBody.querySelector(`[data-product-id="${productId}"] .cart-product__price`);
-    let infoPrice = modalBody.querySelector(`.cart-buttons__info-price`);
+    const productId = cartItem.product.id;
+    const modalBody = document.querySelector('.modal__body');
+    const productElement = modalBody.querySelector(`[data-product-id="${productId}"]`);
+    const productCount = modalBody.querySelector(
+      `[data-product-id="${productId}"] .cart-counter__count`,
+    );
+    const productPrice = modalBody.querySelector(
+      `[data-product-id="${productId}"] .cart-product__price`,
+    );
+    const infoPrice = modalBody.querySelector('.cart-buttons__info-price');
 
-    if (cartItem.count == 0) {
+    if (cartItem.count === 0) {
       productElement.remove();
     } else {
       productCount.innerHTML = cartItem.count;
@@ -162,28 +177,27 @@ export default class Cart {
   onSubmit(event) {
     event.preventDefault();
 
-    let form = document.querySelector('.cart-form');
+    const form = document.querySelector('.cart-form');
     fetch('https://httpbin.org/post', {
       method: 'POST',
-      body: new FormData(form)
-    })
-      .then(() => {
-        this.modal.setTitle('Success!');
+      body: new FormData(form),
+    }).then(() => {
+      this.modal.setTitle('Success!');
 
-        let modalBody = document.createElement('div');
-        modalBody.classList.add('modal__body-inner');
-        modalBody.innerHTML = `
+      const modalBody = document.createElement('div');
+      modalBody.classList.add('modal__body-inner');
+      modalBody.innerHTML = `
           <p>
             Order successful! Your order is being collected :) <br>
             We’ll notify you about delivery time shortly.
           </p>
         `;
-        this.modal.setBody(modalBody);
+      this.modal.setBody(modalBody);
 
-        this.cartItems.length = 0;
+      this.cartItems.length = 0;
 
-        this.cartIcon.update(this);
-      });
+      this.cartIcon.update(this);
+    });
   }
 
   addEventListeners() {

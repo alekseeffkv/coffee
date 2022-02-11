@@ -10,7 +10,7 @@ export default class Modal {
   }
 
   #createModal() {
-    let modal = createElement(`
+    const modal = createElement(`
     <div class="modal">
       <div class="modal__overlay"></div>
 
@@ -47,18 +47,18 @@ export default class Modal {
 
     document.querySelector('.modal__close').addEventListener('click', this.close);
 
-    document.onkeydown = event => {
+    document.onkeydown = (event) => {
       if (event.code === 'Escape') this.close();
     };
   }
 
   close() {
     if (document.querySelector('.modal')) {
-    document.querySelector('.modal').remove();
-    
-    document.body.classList.remove('is-modal-open');
+      document.querySelector('.modal').remove();
 
-    document.onkeydown = null;
+      document.body.classList.remove('is-modal-open');
+
+      document.onkeydown = null;
     }
   }
 }

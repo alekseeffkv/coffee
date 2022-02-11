@@ -1,9 +1,10 @@
+import Masonry from 'masonry-layout';
 import createElement from '../../lib/create-element';
 import './index.css';
-import Masonry from 'masonry-layout';
 
 export default class Gallery {
   images = [];
+
   elem = null;
 
   constructor(images) {
@@ -19,11 +20,12 @@ export default class Gallery {
 
     const masonryElem = document.querySelector('.gallery__inner');
 
+    // eslint-disable-next-line no-new
     new Masonry(masonryElem, {
       itemSelector: '.gallery__img',
       columnWidth: 360,
       horizontalOrder: true,
-      gutter: 35
+      gutter: 35,
     });
 
     if (!document.querySelector('.gallery__img.hidden')) {
@@ -43,9 +45,12 @@ export default class Gallery {
       </div>
 
       <div class="gallery__inner">
-        ${this.images.map((image) => {
-          return `<img src="/src/components/gallery/images/${image}" class="gallery__img hidden" alt="slide"></img>`
-        }).join('')}
+        ${this.images
+          .map((image) => {
+            return `<img src="/src/components/gallery/images/${image}"
+            class="gallery__img hidden" alt="slide"></img>`;
+          })
+          .join('')}
       </div>
 
       <button type="button" class="gallery__button">LOAD MORE</button>

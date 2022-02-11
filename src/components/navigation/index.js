@@ -1,8 +1,9 @@
-import createElement from "../../lib/create-element";
+import createElement from '../../lib/create-element';
 import './index.css';
 
 export default class Navigation {
   navItems = [];
+
   elem = null;
 
   constructor(navItems) {
@@ -19,15 +20,15 @@ export default class Navigation {
       <nav class="navigation">
         ${this.navItems.map(this.#linkTemplate).join('')}
       </nav>
-    `)
+    `);
 
     let preLink = null;
 
-    nav.addEventListener('click', e => {
-      if (e.target.classList.contains("navigation__item")) {
-        !preLink || preLink.classList.remove("navigation__item_active");
+    nav.addEventListener('click', (e) => {
+      if (e.target.classList.contains('navigation__item')) {
+        preLink?.classList.remove('navigation__item_active');
 
-        e.target.classList.add("navigation__item_active");
+        e.target.classList.add('navigation__item_active');
 
         preLink = e.target;
       }

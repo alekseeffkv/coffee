@@ -6,7 +6,9 @@ import './index.css';
 
 export default class Header {
   elem = null;
+
   #header = null;
+
   #initialTopCoord = null;
 
   constructor() {
@@ -17,7 +19,7 @@ export default class Header {
 
   updatePosition() {
     if (!this.#initialTopCoord) {
-    this.#initialTopCoord = this.#header.getBoundingClientRect().top + window.pageYOffset;
+      this.#initialTopCoord = this.#header.getBoundingClientRect().top + window.pageYOffset;
     }
 
     if (window.pageYOffset > this.#initialTopCoord) {
@@ -27,9 +29,8 @@ export default class Header {
     }
   }
 
-  openMenu = e => {
-    if (e.target.closest('.hero__menu-icon') ||
-        e.target.closest('.navigation__item')) {
+  openMenu = (e) => {
+    if (e.target.closest('.hero__menu-icon') || e.target.closest('.navigation__item')) {
       const menuIcon = this.elem.querySelector('.hero__menu-icon');
 
       this.elem.querySelector('.hero__nav').classList.toggle('hero__nav_open');
@@ -42,7 +43,7 @@ export default class Header {
         menuIcon.innerHTML = menu;
       }
     }
-  }
+  };
 
   addEventListeners() {
     document.addEventListener('scroll', () => this.updatePosition());
@@ -70,8 +71,13 @@ export default class Header {
 
         <div class="hero__text">
           <div class="hero__title">Keep your dreams aroused with a cup of coffee</div>
-          <div class="hero__description">The coffee ideas shared by these generators are not cool at all, as they are not a human being</div>
-          <button type="button" class="hero__button" onclick="location.href='#carousel'">Buy Now</button>
+          <div class="hero__description">
+            The coffee ideas shared by these generators are not cool at all,
+            as they are not a human being
+          </div>
+          <button type="button" class="hero__button" onclick="location.href='#carousel'">
+            Buy Now
+          </button>
         </div>
 
       </div>

@@ -12,7 +12,7 @@ import Carousel from './components/carousel';
 import Cart from './components/cart';
 
 import Gallery from './components/gallery';
-import images from './components/gallery/images.js';
+import images from './components/gallery/images';
 
 import FollowUs from './components/follow-us';
 import contactItems from './components/follow-us/contact-items';
@@ -23,10 +23,6 @@ import newsItems from './components/news/news-items';
 import Footer from './components/footer';
 
 class Main {
-
-  constructor() {
-  }
-
   async render() {
     const header = new Header();
     document.body.prepend(header.elem);
@@ -46,8 +42,8 @@ class Main {
     const carousel = new Carousel(products);
     document.querySelector('[data-carousel-holder]').append(carousel.elem);
 
-    carousel.elem.addEventListener('product-add', event => {
-      let addedProduct = products.find(product => product.id == event.detail.productID);
+    carousel.elem.addEventListener('product-add', (event) => {
+      const addedProduct = products.find((product) => product.id === event.detail.productID);
       cart.addProduct(addedProduct, event.detail.productCount);
     });
 
@@ -68,5 +64,4 @@ class Main {
 
 const main = new Main();
 
-main.render()
-  .then(() => console.log('Страница готова!'));
+main.render();
