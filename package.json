@@ -5,8 +5,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server",
-    "prettier": "prettier --write src/**/*.js"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -18,10 +17,12 @@
     "url": "https://github.com/alekseeffkv/coffee-landing-page/issues"
   },
   "homepage": "https://github.com/alekseeffkv/coffee-landing-page#readme",
+  "browserslist": "last 4 version",
   "dependencies": {
     "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.5.1",
@@ -30,6 +31,8 @@
     "eslint-config-prettier": "^8.3.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.6",
+    "postcss-loader": "^6.2.1",
     "prettier": "2.5.1",
     "style-loader": "^3.3.1",
     "svg-inline-loader": "^0.8.2",

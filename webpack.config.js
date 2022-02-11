@@ -13,7 +13,18 @@ module.exports = {
       { test: /\.svg$/i, use: 'svg-inline-loader' },
       {
         test: /\.css$/i,
-        use: [prodMode ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader'],
+        use: [
+          prodMode ? MiniCssExtractPlugin.loader : 'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['autoprefixer'],
+              },
+            },
+          },
+        ],
       },
       { test: /\.(png|jpg|jpeg|gif)$/i, type: 'asset/resource' },
       { test: /\.js$/i, use: 'babel-loader' },
@@ -57,6 +68,6 @@ module.exports = {
     hot: true,
     open: true,
   },
-  devtool: 'inline-source-map',
+  // devtool: 'eval',
   mode: prodMode ? 'production' : 'development',
 };
