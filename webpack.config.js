@@ -54,7 +54,7 @@ module.exports = {
           from: 'src/**/*',
           to: '[path][name][ext]',
           globOptions: {
-            ignore: ['**/*.js', '**/*.json', '**/*.html', '**/*.css', '**/*.ico'],
+            ignore: ['**/*.js', '**/*.html', '**/*.css', '**/*.ico'],
           },
         },
         {
