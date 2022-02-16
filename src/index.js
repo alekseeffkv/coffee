@@ -8,7 +8,6 @@ import navItems from './components/navigation/nav-items';
 import CartIcon from './components/cart-icon';
 
 import Carousel from './components/carousel';
-import json from './products.json';
 
 import Cart from './components/cart';
 
@@ -36,10 +35,8 @@ class Main {
 
     const cart = new Cart(cartIcon);
 
-    // Для хостинга на GitHub Pages убрал серверный запрос
-    // const response = await fetch('/src/products.json');
-    // const json = await response.json();
-
+    const response = await fetch('/src/products.json');
+    const json = await response.json();
     const products = JSON.parse(JSON.stringify(json));
 
     const carousel = new Carousel(products);
