@@ -110,29 +110,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 320px;
+  width: 250px;
 }
 
 .follow__twitter svg,
-.follow__facebook svg,
-.follow__instagram svg,
 .follow__linkedin svg {
   width: 50px;
   height: 50px;
   cursor: pointer;
 }
 
+.follow__vk svg {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
 .follow__twitter path,
-.follow__facebook path,
-.follow__instagram path,
+.follow__vk path,
 .follow__linkedin path {
   stroke: var(--color-white);
   transition: all 0.2s ease;
 }
 
 .follow__twitter:hover svg *,
-.follow__facebook:hover svg *,
-.follow__instagram:hover svg *,
+.follow__vk:hover svg *,
 .follow__linkedin:hover svg * {
   stroke: var(--color-red);
   transition: all 0.2s ease;

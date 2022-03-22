@@ -3,8 +3,7 @@ import './index.css';
 import logo from '../../icons/logo.svg';
 import phone from '../../icons/phone.svg';
 import twitter from '../../icons/twitter.svg';
-import facebook from '../../icons/facebook.svg';
-import instagram from '../../icons/instagram.svg';
+import vk from '../../icons/vk.svg';
 import linkedin from '../../icons/linkedin.svg';
 
 export default class Footer {
@@ -58,11 +57,8 @@ export default class Footer {
               <a href="${this.contactItems.twitter}" target="_blank" class="footer__twitter">
                 ${twitter}
               </a>
-              <a href="${this.contactItems.facebook}" target="_blank" class="footer__facebook">
-                ${facebook}
-              </a>
-              <a href="${this.contactItems.instagram}" target="_blank" class="footer__instagram">
-                ${instagram}
+              <a href="${this.contactItems.vk}" target="_blank" class="footer__vk">
+                ${vk}
               </a>
               <a href="${this.contactItems.linkedin}" target="_blank" class="footer__linkedin">
                 ${linkedin}

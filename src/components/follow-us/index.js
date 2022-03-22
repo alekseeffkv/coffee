@@ -3,8 +3,7 @@ import './index.css';
 import phone from '../../icons/phone.svg';
 import email from '../../icons/email.svg';
 import twitter from '../../icons/twitter.svg';
-import facebook from '../../icons/facebook.svg';
-import instagram from '../../icons/instagram.svg';
+import vk from '../../icons/vk.svg';
 import linkedin from '../../icons/linkedin.svg';
 
 export default class FollowUs {
@@ -30,12 +29,8 @@ export default class FollowUs {
       window.open(this.contactItems.twitter, '_blank');
     }
 
-    if (e.target.closest('.follow__facebook')) {
-      window.open(this.contactItems.facebook, '_blank');
-    }
-
-    if (e.target.closest('.follow__instagram')) {
-      window.open(this.contactItems.instagram, '_blank');
+    if (e.target.closest('.follow__vk')) {
+      window.open(this.contactItems.vk, '_blank');
     }
 
     if (e.target.closest('.follow__linkedin')) {
@@ -60,8 +55,7 @@ export default class FollowUs {
           </div>
           <div class="follow__social">
             <div class="follow__twitter">${twitter}</div>
-            <div class="follow__facebook">${facebook}</div>
-            <div class="follow__instagram">${instagram}</div>
+            <div class="follow__vk">${vk}</div>
             <div class="follow__linkedin">${linkedin}</div>
           </div>
         </div>

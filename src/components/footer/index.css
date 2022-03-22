@@ -153,13 +153,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 245px;
+  width: 200px;
   margin-bottom: 55px;
 }
 
 .footer__twitter svg,
-.footer__facebook svg,
-.footer__instagram svg,
+.footer__vk svg,
 .footer__linkedin svg {
   width: 38px;
   height: 38px;
@@ -167,16 +166,14 @@
 }
 
 .footer__twitter path,
-.footer__facebook path,
-.footer__instagram path,
+.footer__vk path,
 .footer__linkedin path {
   stroke: var(--color-white);
   transition: all 0.2s ease;
 }
 
 .footer__twitter:hover svg *,
-.footer__facebook:hover svg *,
-.footer__instagram:hover svg *,
+.footer__vk:hover svg *,
 .footer__linkedin:hover svg * {
   stroke: var(--color-red);
   transition: all 0.2s ease;
