@@ -35,14 +35,30 @@
 }
 
 .modal__body-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal__body-inner p {
   font-family: var(--font-primary);
   font-weight: 700;
   font-size: 21px;
   color: var(--color-black);
   text-align: center;
-  line-height: 1.2;
-  color: var(--color-black);
+  line-height: 1.5;
   padding: 40px 33px;
+}
+
+.modal__body-inner svg {
+  width: 200px;
+  height: 200px;
+  padding-top: 20px;
+}
+
+.modal__body-inner path {
+  fill: var(--color-red);
 }
 
 .modal__header {

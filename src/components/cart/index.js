@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import createElement from '../../lib/create-element';
 import escapeHtml from '../../lib/escape-html';
 import Modal from '../modal';
@@ -182,16 +183,25 @@ export default class Cart {
       method: 'POST',
       body: new FormData(form),
     }).then(() => {
-      this.modal.setTitle('Success!');
+      this.modal.setTitle('Order successful!');
 
       const modalBody = document.createElement('div');
       modalBody.classList.add('modal__body-inner');
       modalBody.innerHTML = `
-          <p>
-            Order successful! Your order is being collected :) <br>
-            We’ll notify you about delivery time shortly.
-          </p>
-        `;
+        <p>
+          Your order is being collected.<br>
+          We’ll notify you about delivery time shortly.
+        </p>
+        <svg width="700pt" height="700pt" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+        <g fill-rule="evenodd">
+          <path d="m462 168c0-61.855-50.145-112-112-112s-112 50.145-112 112v65.332c0 5.1562 4.1797 9.3359 9.332 9.3359 5.1562 0 9.3359-4.1797 9.3359-9.3359v-65.332c0-51.547 41.785-93.332 93.332-93.332s93.332 41.785 93.332 93.332v65.332c0 5.1562 4.1797 9.3359 9.3359 9.3359 5.1523 0 9.332-4.1797 9.332-9.3359z"/>
+          <path d="m415.33 205.33c5.1562 0 9.3359-4.1758 9.3359-9.332s-4.1797-9.332-9.3359-9.332h-130.66c-5.1562 0-9.3359 4.1758-9.3359 9.332s4.1797 9.332 9.3359 9.332z"/>
+          <path d="m160.6 239.93c-3.6445 3.6445-9.5547 3.6445-13.199 0-3.6445-3.6484-3.6445-9.5547 0.003906-13.199l37.09-37.086c1.5664-1.6836 3.75-2.793 6.1914-2.9609 0.22266-0.011719 19.316-0.019531 19.316-0.019531 5.1562 0 9.332 4.1758 9.332 9.332s-4.1758 9.332-9.332 9.332h-14.793z"/>
+          <path d="m539.4 239.93c3.6445 3.6445 9.5547 3.6445 13.199 0 3.6445-3.6484 3.6445-9.5547-0.003906-13.199l-37.09-37.086c-1.5664-1.6836-3.75-2.793-6.1914-2.9609-0.22266-0.011719-19.316-0.019531-19.316-0.019531-5.1562 0-9.332 4.1758-9.332 9.332s4.1758 9.332 9.332 9.332h14.793z"/>
+          <path d="m144.67 233.33v280c0 5.1562 4.1758 9.3359 9.332 9.3359h392c5.1562 0 9.332-4.1797 9.332-9.3359v-280c0-5.1523-4.1758-9.332-9.332-9.332h-392c-5.1562 0-9.332 4.1797-9.332 9.332zm197.6 204.4c3.6445 3.6445 9.5547 3.6445 13.199 0l105.59-105.6c3.6445-3.6445 3.6445-9.5547 0-13.199-3.6445-3.6445-9.5547-3.6445-13.199 0l-98.996 98.996-59.395-59.398c-3.6484-3.6445-9.5547-3.6445-13.203 0-3.6445 3.6445-3.6445 9.5547 0 13.199z"/>
+        </g>
+        </svg>
+      `;
       this.modal.setBody(modalBody);
 
       this.cartItems.length = 0;

@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const prodMode = true; // process.env.NODE_ENV === 'production';
+const prodMode = false;
 
 module.exports = {
   entry: './src',
@@ -68,6 +68,5 @@ module.exports = {
     hot: true,
     open: true,
   },
-  // devtool: 'eval',
   mode: prodMode ? 'production' : 'development',
 };
